@@ -11,17 +11,17 @@ class Node:
 
 class Graph:
     def __init__(self):
-        self.startNode = Node(450,50,'A')
-        self.node1 = Node(250,100,'B')
-        self.node2 = Node(700,100,'C')
-        self.node3 = Node(450,150,'D')
-        self.node4 = Node(250,200,'E')
-        self.node5 = Node(700,200,'F')
-        self.node6 = Node(450,250,'G')
-        self.node7 = Node(250,300,'H')
-        self.node8 = Node(700,300,'I')
-        self.node9 = Node(450,350,'J')
-        self.node10 = Node(450,400,'K')
+        self.startNode = Node(350,35,'A')
+        self.node1 = Node(150,135,'B')
+        self.node2 = Node(550,135,'C')
+        self.node3 = Node(350,200,'D')
+        self.node4 = Node(150,300,'E')
+        self.node5 = Node(550,300,'F')
+        self.node6 = Node(350,375,'G')
+        self.node7 = Node(150,475,'H')
+        self.node8 = Node(550,475,'I')
+        self.node9 = Node(350,550,'J')
+        self.node10 = Node(350,670,'K')
         self.edges = {self.startNode.id:{self.node1.id:100,self.node2.id:100,self.node3.id:150},
                       self.node1.id:{self.startNode.id:100,self.node2.id:200,self.node4.id:200,self.node6.id:250},
                       self.node2.id:{self.startNode.id:100,self.node1.id:200,self.node5.id:200,self.node6.id:250},
@@ -36,13 +36,17 @@ class Graph:
                       }
 
 
-House = Graph()
-G = nx.Graph(House.edges)
-pos = nx.spring_layout(G)
-nx.draw_networkx_nodes(G,pos)
-nx.draw_networkx_edges(G,pos)
-nx.draw_networkx_labels(G,pos)
+#House = Graph()
+#G = nx.Graph(House.edges)
+#pos = nx.spring_layout(G)
+#nx.draw_networkx_nodes(G,pos)
+#nx.draw_networkx_edges(G,pos)
+#nx.draw_networkx_labels(G,pos)
 
-plt.show()
+#plt.show()
 
+
+
+
+        
 
