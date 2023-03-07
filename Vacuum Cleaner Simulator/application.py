@@ -17,18 +17,25 @@ class application(CTk):
         self.geometry("900x700")
         self.config(bg="#87CDF6")
         self.resizable(False,False)
+        self.label()
         self.canvas()
-        
         self.mainloop()
     
     
     def label(self):
-        #Background Image setting
-        self.Image = Image.open("Resources/black_bg.jpg")
-        self.resizedImage = self.Image.resize((925,605))
-        self.backgroundImage = ImageTk.PhotoImage(self.resizedImage)
-        self.backgroundImageLabel = Label(self,image=self.backgroundImage)
-        self.backgroundImageLabel.place(x=-5,y=0)
+        self.titleLabel = CTkLabel(self,
+                                   width=50,
+                                   height=30,
+                                   text="Vacuum Cleaner\nSimulator",
+                                   bg_color="green",
+                                   fg_color="#87CDF6",
+                                   font=("Helvetica",20),
+                                   corner_radius=20)
+        self.titleLabel.place(x=35,y=20)
+        
+    
+    #def button(self):
+        #Button setting
     
     def canvas(self):
         self.visualizer = CTkCanvas(self, width=700, height=700)
@@ -38,7 +45,8 @@ class application(CTk):
                                                  self.playground.node1.posX,
                                                  self.playground.node1.posY,
                                                  width=5,
-                                                 activefill="Black")
+                                                 activefill="Black"
+                                                 )
         self.edge2 = self.visualizer.create_line(self.playground.startNode.posX,
                                                  self.playground.startNode.posY,
                                                  self.playground.node2.posX,
