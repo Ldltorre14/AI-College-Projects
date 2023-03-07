@@ -4,7 +4,7 @@ import matplotlib.pylab as plt
 class Node:
     def __init__(self,posX,posY,id):
         self.id = id
-        self.isClean = False
+        self.status = False
         self.posX = posX
         self.posY = posY
 
@@ -45,6 +45,10 @@ class Graph:
 
 #plt.show()
 
+
+
+
+        
 
 
 
